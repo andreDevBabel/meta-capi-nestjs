@@ -9,7 +9,7 @@ export class CapiController {
 
   @Post('event')
   async sendCapi(@Body() body: SendCapiDto) {
-    // Só dispara pro service, o resto é desacoplado
+    // Só dispara pro service, o resto é descartado
     return this.capiService.sendEvent(body)
   }
 }
